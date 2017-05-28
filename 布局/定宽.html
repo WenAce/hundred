@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.aside{
+				float: left;
+				width: 200px;
+				height: 50px;
+				background-color: #90EE90;
+			}
+			.container{
+				margin-left: 220px;
+				height: 50px;
+				background-color: aquamarine;
+			}
+			.fix{
+				float: left;
+				margin-left: -200px;
+				width: 100%;
+			}
+			.container_1{
+				overflow: hidden;
+				
+				background-color: sandybrown;
+				height: 50px;
+			}
+			.aside-1{
+				margin-right: 20px;
+			}
+			.wrap{
+				display: flex;
+			}
+			.left{
+				width: 200px;
+				height: 50px;
+				background-color: lightblue;
+				margin-right:20px ;
+			}
+			.right{
+				flex: 1;
+				height: 50px;
+				background-color: lightgreen;
+			}
+			.table{
+				display: table;
+				table-layout: fixed;
+				width: 100%;
+			}
+			.table_left,.table_right{
+				display: table-cell;
+			}
+			.table_left{
+				width: 200px;
+				height: 50px;
+				background-color: lightgreen;	
+				padding-right: 20px;
+			}
+			.table_right{
+				background-color: #ADD8E6;
+			}
+		</style>
+	</head>
+	<body>
+		<p>定宽两列自适应布局</p>
+		<fieldset >
+			<legend>margin+float<strong>(存在清楚浮动问题)</strong></legend>
+			<div class="aside">
+				aside
+			</div>
+			<div class="container">
+				container
+			</div>
+		</fieldset>
+		<br />
+		<fieldset >
+			<legend>margin+float+(fix)</legend>
+			<div class="aside">
+				aside
+			</div>
+			<div class="fix">
+				<div class="container">
+				container
+			</div>
+			</div>	
+		</fieldset>
+		<br />
+		<fieldset >
+			<legend>float+overflow<strong>  IE6下不兼容</strong></legend>
+			<div class="aside aside-1">
+				aside
+			</div>
+			<div class="container_1">
+				container
+			</div>
+		</fieldset>
+		
+		<br />
+			<fieldset >
+			<legend>flex布局</legend>
+			<div class="wrap">
+				<div class="left">
+					aside
+				</div>
+				<div class="right">
+					container
+				</div>
+			</div>
+		</fieldset>
+		<br />
+		
+		<fieldset >
+			<legend>table</legend>
+			<div class="table">
+				<div class="table_left">
+					left
+				</div>
+				<div class="table_right">
+				right
+				</div>
+			</div>	
+		</fieldset>
+	</body>
+</html>

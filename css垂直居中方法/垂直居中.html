@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>垂直居中</title>
+		<style type="text/css">
+			.container{
+				position: relative;
+				top: 10px;
+				background-color: darkslategray;
+				width: 100%;
+				height: 800px;
+				
+			}
+			.main{
+				text-align: center;
+				position: absolute;
+				background-color: lightgreen;
+				width: 500px;
+				height: 200px;
+				margin: auto;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				
+			}
+			
+			.is_left{
+				left: auto;
+				right: 20px;
+				text-align: right;
+			}
+			
+			.response{
+				width: 60%;
+				height: 60%;
+				max-width: 400px;
+				min-width: 200px;
+			}
+			.table{
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				top: 10px;
+				background-color: darkslategray;
+				width: 100%;
+				height: 800px;
+			}
+			.table_container{
+				background-color: lightgreen;
+				width: 1000px;
+				height: 200px;
+				
+			}
+			
+			.absol{
+				position: relative;
+				width: 800px;
+				height: 800px;
+				background-color: darkslategray;
+			}
+			.transform{
+				position: absolute;
+				width: 800px;
+				height: 400px;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: lightgreen;
+				
+			}
+			
+			
+			.flex{
+				width: 800px;
+				height: 800px;
+				display: flex;
+				align-items: center;
+				background-color: darkslategrey;
+			}
+			.flex_container{
+				width: 800px;
+				height: 400px;
+				background-color: lightgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<p>小提示：偏移属性top/left/right/bottom在position下才会生效(ps:出static)</p>
+		<div class="container">
+			<div class="main">
+				绝对居中定位
+			</div>
+		</div>
+		<br />
+		
+		
+		<div class="container">
+			<div class="main is_left">
+				右对齐
+			</div>
+		</div>
+		<br />
+		
+		<div class="container">
+			<div class="main response">
+				响应式居中对齐
+			</div>
+		</div><br />
+		
+		<div class="table">
+			<div class="table_container">
+				<p>table-cell+vertical-align</p>
+				均设置在父级
+				<code>.table{
+					display:table-cell;
+					vertical-align:middle;
+				}</code>
+			</div>
+		</div><br />
+		
+		<div class="absol">
+			<div class="transform">
+				<p>absolute+transform</p>
+				通过在子元素设置<code>.transform{
+					position:absolute;
+					top:50%;
+					transformY：(-50%);
+				}</code>
+			</div>
+		</div><br />
+		
+		<div class="flex">
+			<div class="flex_container">
+				flex+align-items
+				<p>简单在父级上设置<code>.flex{display:flex;align-items:middle;}</code></p>
+			</div>
+		</div>
+		
+	</body>
+</html>

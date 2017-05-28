@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>三行自适应布局</title>
+		<style>
+			*{margin: 0;padding: 0;}
+			.header,.main,.footer{
+				width: 100%;
+			}
+			.header{
+				position: absolute;
+				height: 100px;
+				top:0;
+				left: 0;
+				background: rgb(214,125,155);
+				
+			}
+			.main{
+				position: absolute;
+				top: 100px;
+				left: 0;
+				right: 0;
+				bottom: 100px;
+				overflow: auto;
+			}
+			.container{
+				height: 2000px;
+			}
+			.footer{
+				position: absolute;
+				height: 100px;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				background: rgb(156,66,48);
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			header
+		</div>
+		<div class="main">
+			<div id="container">
+				main
+			</div>
+		</div>
+		<div class="footer">
+			footer
+		</div>
+	</body>
+</html>
